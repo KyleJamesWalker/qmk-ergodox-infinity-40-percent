@@ -1,4 +1,5 @@
 # How to compile and program QMK on the Ergodox Infinity
+
 ## Update the keymap
 1. Load the layout.json into the [QMK Configurator](https://config.qmk.fm/#/ergodox_infinity/LAYOUT_ergodox) and make needed changes
 2. Convert the layout.json into date for keymap.c:
@@ -27,3 +28,7 @@
      qmkfm/qmk_firmware \
      bash -c "make ergodox_infinity:docker-mount MASTER=right; cp /qmk_firmware/ergodox_infinity_docker-mount.bin /build/right.bin"
    ```
+
+## Flash the keyboard
+1. Use QMK Toolbox select which half of the keyboard to program and select the `atmega32u4`
+   and select the bin files within the build directory.
